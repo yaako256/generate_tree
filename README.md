@@ -1,6 +1,6 @@
 # プロジェクト概要
 ## プロジェクト名
-generate_tree
+generate_tree_ver2
 
 ## プロジェクトの目的
 ```
@@ -30,7 +30,7 @@ generate_tree
 
 ## 基本コマンド
 ```bash
-python generate_tree.py [パス] [深さ]
+python generate_tree.py [パス] [深さ] [除外名] [除外名]...
 ```
 
 ## 1.現在の場所をすべて表示
@@ -51,11 +51,17 @@ python generate_tree.py ./src
 python generate_tree.py . 3
 ```
 
-## 特定のフォルダを、階層を絞って表示
+## 4.特定のフォルダを、階層を絞って表示
 パスと深さを両方指定します。
 ```bash
 python generate_tree.py ./my_project 2
 ```
+
+## 5.除外対象ありで表示
+```bash
+python generate_tree.py . 100 target .git
+```
+
 ---
 ---
 # 表示ルール
@@ -95,3 +101,6 @@ sample_project/
 今回は**完全**にGeminiに書かせた。<br>
 1つのエラーもなく、**30分**くらいで完成した。<br>
 Gemini君すげー。
+
+## generate_tree.py (ver1)からの変更点
+* 除外機能の追加
